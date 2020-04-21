@@ -1,0 +1,50 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/typescript/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "warn",
+
+    "semi": "error",
+
+    "vue/script-indent": [ "warn", 2, {
+      "baseIndent": 1
+    }],
+
+    "vue/html-indent": ["warn", 2, {
+      "attribute": 1,
+      "baseIndent": 1
+    }]
+  },
+  "overrides": [
+
+    {
+      "files": [ "*.ts" ],
+      "rules": {
+
+        "@typescript-eslint/indent": [ "warn", 2 ]
+
+      }
+    },
+
+    {
+      "files": [
+        "**/__tests__/*.ts",
+        "**/tests/unit/**/*.spec.ts"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
