@@ -54,4 +54,4 @@ Below I'll list some of the issues I run into while developing this repository.
 
 ### Router
 
-To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScript, a [shims.d.ts](https://github.com/vuejs/vue-router-next/blob/master/playground/shim.d.ts) declaration file was added to the `src/` folder. Read issues [#7](vuejs/vue-cli-plugin-vue-next/issues/7) and [#18](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/18) for more information.
+To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScript, a [shims.d.ts](https://github.com/vuejs/vue-router-next/blob/master/playground/shim.d.ts) declaration file was added to the `src/` folder. Read issues [#7](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/7) and [#18](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/18) for more information.
