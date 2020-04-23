@@ -15,7 +15,7 @@
   import { defineComponent } from 'vue';
   import { fetchLinks }      from './home.store';
   //
-  import HelloWorld          from './component/hello-world.vue';
+  import HelloWorld from './component/hello-world.vue';
 
   export default defineComponent({
     name: 'Home',

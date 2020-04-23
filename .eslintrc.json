@@ -3,14 +3,16 @@
   "env": {
     "node": true
   },
-  "extends": [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/typescript/recommended"
-  ],
   "parserOptions": {
+    "parser": "@typescript-eslint/parser",
     "ecmaVersion": 2020
   },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:vue/vue3-essential"
+  ],
   "rules": {
     "no-console": "warn",
     "no-debugger": "warn",

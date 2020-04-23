@@ -15,8 +15,11 @@
     /* TYPE CHECKING*/
     "strict": true,
     "types": [
-      "webpack-env",
-      "jest"
+      "browserify",
+      "mini-css-extract-plugin",
+      "webpack",
+      "webpack-dev-server",
+      "webpack-env"
     ],
 
     /* MODULES */
@@ -39,6 +42,7 @@
     "tests/**/*.ts",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }
