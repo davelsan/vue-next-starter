@@ -6,7 +6,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   ],
 
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-})
+});
 
 module.exports = {
   plugins: [
@@ -16,4 +16,4 @@ module.exports = {
       ? [purgecss]
       : []
   ]
-}
+};
