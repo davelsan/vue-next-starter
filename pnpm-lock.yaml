@@ -4,7 +4,6 @@ dependencies:
   tailwindcss: 1.2.0
   vue: 3.0.0-beta.2
   vue-router: 4.0.0-alpha.7_vue@3.0.0-beta.2
-  vuex: 4.0.0-alpha.1_vue@3.0.0-beta.2
 devDependencies:
   '@fullhuman/postcss-purgecss': 2.1.2
   '@types/jest': 24.9.1
@@ -10612,14 +10611,6 @@ packages:
       '@vue/shared': 3.0.0-beta.2
     resolution:
       integrity: sha512-/HYhK9i8PWM0fL38YflFK/vY1ots+JyNI2GZa8VtDqj4jD3+2UZ0CH0kjmw9YTmRtHdsU65CXGkVuA3EMV3mXQ==
-  /vuex/4.0.0-alpha.1_vue@3.0.0-beta.2:
-    dependencies:
-      vue: 3.0.0-beta.2
-    dev: false
-    peerDependencies:
-      vue: ^3.0.0-alpha.8
-    resolution:
-      integrity: sha512-J08Mtcjx2JOyTL+XnXQqqBDyyHpTRFSJvnjkB7FPj0FWFZSpT0atkv3Wp75UxkPAgw3+SCR2tLdr1mm0cBhGjA==
   /w3c-hr-time/1.0.2:
     dependencies:
       browser-process-hrtime: 1.0.0
@@ -11237,4 +11228,3 @@ specifiers:
   vue: ^3.0.0-beta.1
   vue-cli-plugin-vue-next: ~0.1.2
   vue-router: ^4.0.0-alpha.5
-  vuex: ^4.0.0-alpha.1
