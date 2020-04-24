@@ -16,7 +16,7 @@ This branch contains a minimal starter app built from scratch, configured to use
 
 ## Develop
 
-The project was installed with [pnpm](https://pnpm.js.org/), but `yarn` or `npm` will work just fine.
+The project was designed with `pnpm` in mind, but `yarn` or `npm` will work just fine.
 
 ### Clone and Setup
 
@@ -28,32 +28,38 @@ pnpm install
 ### Command Cheatsheet
 
 ```sh
-pnpm run serve      # compile and hot-reload for development
 pnpm run build      # compile and minify for production
 pnpm run lint       # lint and fix typescript files
+pnpm run serve      # compile and hot-reload for development
+pnpm run stats      # generate a source-map-explorer report
 ```
 
 ## Configuration
 
-### ESLint
+### Lint
 
 Linting is configured to use the recommended `vue3-essential` rules from [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue). For more information, check the [documentation](https://eslint.vuejs.org/rules/). A few extra rules have been added for `template`, `script`  and `*.ts` indentation. Linting of `*.js` files has been disabled via `.eslintignore`.
 
-### Styles
+### Style
 
 The original components have been modified to use [Tailwind CSS](https://tailwindcss.com/) utility classes. Relevant configuration files are `postcss.config.js`, `tailwind.config.js`, and `src/css/tailwind.css`.
 
 ## Pending
 
-- [ ] Add unit tests (check the [vue-test-utils-next](https://github.com/vuejs/vue-test-utils-next?ref=madewithvuejs.com) docs)
-- [ ] Keep working on the module-based system, with an emphasis on state management (with and without [Vuex 4.0](https://github.com/vuejs/vuex/tree/4.0)).
-- [ ] Beautify webpack build output.
+- [ ] Add [Jest](https://jestjs.io/) support (check the [vue-test-utils-next](https://github.com/vuejs/vue-test-utils-next?ref=madewithvuejs.com) docs)
+- [ ] Keep working on the module-based system, with an emphasis on state management (with and without [Vuex 4](https://github.com/vuejs/vuex/tree/4.0)).
+- [ ] Check that PWA functionality works correctly.
+- [ ] Customize webpack build output.
 
-## Troubleshoot
+## Issues
 
-In Apr 16, 2020, [vue-next](https://github.com/vuejs/vue-next) entered the public beta stage. This means that, even though the API has reached feature parity with `v2.x`, bugs are expected. Moreover, the ecosystem is still catching up and many popular packages might not fully work out of the box, yet.
+In Apr 16, 2020, [vue-next](https://github.com/vuejs/vue-next) entered the public beta stage. This means that, even though the API has reached feature parity with `v2.x`, bugs are expected. Moreover, the ecosystem is still catching up and many popular packages might not fully work out of the box, yet. Finally, this is an experimental repository created without aid from the official CLI toolchain.
 
-### routing
+### source-map-explorer
+
+Bundle size is analyzed using [source-map-explorer](https://github.com/danvk/source-map-explorer). For the transpiled `{home,about}.js` components, there is a significant unmapped percentage. The `main.css` map cannot be parsed, possibly due to a problem with the way I configured the `/\.css$/` rule in `webpack.config.ts`.
+
+### vue-router
 
 To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScript, a `*.vue` module declaration was added to `shims.d.ts`. Read issues [#7](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/7) and [#18](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/18) for more information, and this [file](https://github.com/vuejs/vue-router-next/blob/master/playground/shim.d.ts) for an example.
 
