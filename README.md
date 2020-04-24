@@ -4,14 +4,14 @@
 
 ## Overview
 
-This branch contains a minimal starter app created with the [Vue CLI](https://cli.vuejs.org/) toolchain, later adding the [cli-plugin-vue-next](https://github.com/vuejs/vue-cli-plugin-vue-next) plugin. The function of this branch is to stay in-sync with upstream changes, using the official channels.
+This branch contains a minimal starter app created by [Vue CLI 3](https://cli.vuejs.org/) and [cli-plugin-vue-next](https://github.com/vuejs/vue-cli-plugin-vue-next). The function of this branch is to stay in-sync with upstream changes, using the official channels.
 
 ## Features
 
 - [TypeScript](https://www.typescriptlang.org/) support via the new [Vue Composition API](https://composition-api.vuejs.org/).
 - JavaScript support with [babel]() polyfills and JSX transpiling.
 - [Tailwind CSS](https://tailwindcss.com/) for component styling.
-- [ESLint](https://eslint.org/) support for JavaScript, TypeScript and Single-File Components.
+- [ESLint](https://eslint.org/) for code linting in JavaScript, TypeScript and SFCs.
 - A lite, module-based application structure.
 
 ## Develop
