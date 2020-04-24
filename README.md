@@ -38,7 +38,7 @@ pnpm run stats      # generate a source-map-explorer report
 
 ### Lint
 
-Linting is configured to use the recommended `vue3-essential` rules from [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue). For more information, check the [documentation](https://eslint.vuejs.org/rules/). A few extra rules have been added for `template`, `script`  and `*.ts` indentation. Linting of `*.js` files has been disabled via `.eslintignore`.
+Linting is configured to use the recommended `vue3-essential` rules from [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue). For more information, check the [documentation](https://eslint.vuejs.org/rules/). A few extra rules have been added for `template`, `script`  and `*.ts` indentation. There is basic support for linting `*.js` config files, but neither [babel](https://babeljs.io/) or [core-js](https://github.com/zloirock/core-js) are installed.
 
 ### Style
 
@@ -47,6 +47,7 @@ The original components have been modified to use [Tailwind CSS](https://tailwin
 ## Pending
 
 - [ ] Add [Jest](https://jestjs.io/) support (check the [vue-test-utils-next](https://github.com/vuejs/vue-test-utils-next?ref=madewithvuejs.com) docs)
+- [ ] Study adding full `.js` support. This will require [babel](https://babeljs.io/), [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) and [core-js](https://github.com/zloirock/core-js).
 - [ ] Keep working on the module-based system, with an emphasis on state management (with and without [Vuex 4](https://github.com/vuejs/vuex/tree/4.0)).
 - [ ] Check that PWA functionality works correctly.
 - [ ] Customize webpack build output.

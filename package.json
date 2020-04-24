@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "rimraf -f dist/ && env-cmd -e production webpack",
-    "lint": "eslint --ext .ts,.vue ./src",
+    "lint": "eslint --ext .js,.ts,.vue ./src",
     "serve": "env-cmd -e development webpack-dev-server --progress",
     "stats": "source-map-explorer dist/*.{css,js} --html dist/stats/index.html && http-server -c-1 -p 9875 ./dist/stats"
   },

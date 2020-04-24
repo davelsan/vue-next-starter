@@ -1,10 +1,10 @@
-const path = require('path')
-const { VueLoaderPlugin } = require('vue-loader')
+const path = require('path');
+const { VueLoaderPlugin } = require('vue-loader');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
-const prod = process.env.NODE_ENV === 'production'
+const prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
 
@@ -133,4 +133,4 @@ module.exports = {
       },
     ]
   }
-}
+};
