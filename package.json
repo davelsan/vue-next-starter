@@ -13,8 +13,7 @@
     "register-service-worker": "^1.7.1",
     "tailwindcss": "^1.2.0",
     "vue": "^3.0.0-beta.1",
-    "vue-router": "^4.0.0-alpha.5",
-    "vuex": "^4.0.0-alpha.1"
+    "vue-router": "^4.0.0-alpha.5"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
