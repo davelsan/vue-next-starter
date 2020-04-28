@@ -58,7 +58,7 @@ In Apr 16, 2020, [vue-next](https://github.com/vuejs/vue-next) entered the publi
 
 ### source-map-explorer
 
-Bundle size is analyzed using [source-map-explorer](https://github.com/danvk/source-map-explorer). For the transpiled `{home,about}.js` components, there is a significant unmapped percentage. The `main.css` map cannot be parsed, possibly due to a problem with the way I configured the `/\.css$/` rule in `webpack.config.ts`.
+Bundle size is analyzed using [source-map-explorer](https://github.com/danvk/source-map-explorer). For the transpiled `{home,about}.js` components, there is a significant unmapped percentage. The `main.css` map cannot be parsed, possibly due to a problem with the `/\.css$/` rule in `webpack.config.ts`.
 
 ### vue-router
 
@@ -66,4 +66,4 @@ To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScri
 
 ### webpack
 
-To allow the named `VueLoaderPlugin` export in `webpack.config.ts`, a `vue-loader` module declaration was added in `shims.d.ts`. A `@ts-ignore` flag was also added to the `new` instance in the plugins section. This should be fixed as soon as the corresponding type export is added to the package (see [PR#1542](https://github.com/vuejs/vue-loader/pull/1542) for a good example).
+To allow the named `VueLoaderPlugin` export in `webpack.config.ts`, the `vue-loader` module declaration was augmented to include the named export. This should be fixed as soon as the corresponding type export is added to the package (see [Issue#1667](https://github.com/vuejs/vue-loader/issues/1667) for more information).
