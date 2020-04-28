@@ -5,10 +5,14 @@ import {
 //
 import HtmlWebpackPlugin    from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import VueLoaderPlugin      from 'vue-loader/dist/plugin';
+import { VueLoaderPlugin }  from 'vue-loader';
 //
-import { Configuration } from 'webpack';
+import { Configuration, Plugin } from 'webpack';
 
+
+declare module 'vue-loader' {
+  export class VueLoaderPlugin extends Plugin { }
+}
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -77,7 +81,6 @@ const config: Configuration = {
     }),
 
     // Apply *.ext rules to the relevant blocks in *.vue files
-    // @ts-ignore
     new VueLoaderPlugin(),
 
   ],
