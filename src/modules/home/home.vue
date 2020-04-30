@@ -5,7 +5,12 @@
 
     <img alt="Vue logo" src="@/assets/logo.png">
 
-    <HelloWorld v-bind="hello" />
+    <HelloWorld
+      v-bind="hello"
+    >
+      This is a HMR test message
+    </HelloWorld>
+
 
   </div>
 </template>
@@ -21,7 +26,7 @@
     name: 'Home',
 
     components: {
-      HelloWorld
+      HelloWorld,
     },
 
     setup () {
