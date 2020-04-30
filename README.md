@@ -47,7 +47,6 @@ The original components have been modified to use [Tailwind CSS](https://tailwin
 
 - [ ] Add unit tests (check the [vue-test-utils-next](https://github.com/vuejs/vue-test-utils-next?ref=madewithvuejs.com) docs)
 - [ ] Keep working on the module-based system, with an emphasis on state management (with and without [Vuex 4](https://github.com/vuejs/vuex/tree/4.0)).
-- [ ] Build from scratch
 
 ## Issues
 
@@ -57,3 +56,7 @@ In Apr 16, 2020, [vue-next](https://github.com/vuejs/vue-next) entered the publi
 ### vue-router
 
 To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScript, a [shims.d.ts](https://github.com/vuejs/vue-router-next/blob/master/playground/shim.d.ts) declaration file was added to the `src/` folder. Read issues [#7](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/7) and [#18](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/18) for more information.
+
+### hot reload
+
+HMR does not trigger on changes to `<slot/>` content. Read issue [#1669](https://github.com/vuejs/vue-loader/issues/1669) for more information.
