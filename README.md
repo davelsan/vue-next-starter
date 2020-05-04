@@ -49,16 +49,17 @@ The original components have been modified to use [Tailwind CSS](https://tailwin
 - [ ] Add [Jest](https://jestjs.io/) support (check the [vue-test-utils-next](https://github.com/vuejs/vue-test-utils-next?ref=madewithvuejs.com) docs)
 - [ ] Study adding full `.js` support. This will require [babel](https://babeljs.io/), [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) and [core-js](https://github.com/zloirock/core-js).
 - [ ] Keep working on the module-based system, with an emphasis on state management (with and without [Vuex 4](https://github.com/vuejs/vuex/tree/4.0)).
-- [ ] Check that PWA functionality works correctly.
-- [ ] Customize webpack build output.
+- [ ] Implement PWA functionality.
 
 ## Issues
 
 In Apr 16, 2020, [vue-next](https://github.com/vuejs/vue-next) entered the public beta stage. This means that, even though the API has reached feature parity with `v2.x`, bugs are expected. Moreover, the ecosystem is still catching up and many popular packages might not fully work out of the box, yet. Finally, this is an experimental repository created without aid from the official CLI toolchain.
 
-### source-map-explorer
+### source-maps ([source-map-explorer](https://github.com/danvk/source-map-explorer))
 
-Bundle size is analyzed using [source-map-explorer](https://github.com/danvk/source-map-explorer). For the transpiled `{home,about}.js` components, there is a significant unmapped percentage. The `main.css` map cannot be parsed, possibly due to a problem with the `/\.css$/` rule in `webpack.config.ts`.
+The `main.css` map cannot be parsed, possibly due to a problem with the `/\.css$/` rule in `webpack.config.ts`.
+
+The transpiled `home` and `about` modules have a significant unmapped percentage.
 
 ### vue-router
 
@@ -66,4 +67,4 @@ To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScri
 
 ### webpack
 
-To allow the named `VueLoaderPlugin` export in `webpack.config.ts`, the `vue-loader` module declaration was augmented to include the named export. This should be fixed as soon as the corresponding type export is added to the package (see [Issue#1667](https://github.com/vuejs/vue-loader/issues/1667) for more information).
+To allow the named `VueLoaderPlugin` export in `webpack.config.ts`, the `vue-loader` module declaration was augmented to include the named export. This should be fixed as soon as the corresponding type export is added to the package (see issue [#1667](https://github.com/vuejs/vue-loader/issues/1667) for more information).
