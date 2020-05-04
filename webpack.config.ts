@@ -24,10 +24,14 @@ const config: Configuration = {
     ? 'production'
     : 'development',
 
-  stats: 'normal',
+  stats: {
+    children: false,
+    entrypoints: false,
+    modules: false,
+  },
 
   devtool: prod
-    ? 'source-map'
+    ? false
     : 'cheap-eval-source-map',
 
   entry: pathResolve(__dirname, './src/app.main.ts'),

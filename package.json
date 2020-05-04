@@ -2,10 +2,10 @@
   "name": "vue-next-starter",
   "private": true,
   "scripts": {
+    "analyze": "",
     "build": "rimraf -f dist/ && env-cmd -e production webpack",
     "lint": "eslint --ext .js,.ts,.vue ./src",
-    "serve": "env-cmd -e development webpack-dev-server --progress",
-    "stats": "source-map-explorer dist/*.{css,js} --html dist/stats/index.html && http-server -c-1 -p 9875 ./dist/stats"
+    "serve": "env-cmd -e development webpack-dev-server --progress"
   },
   "dependencies": {
     "register-service-worker": "^1.7.1",
@@ -36,7 +36,6 @@
     "path-browserify": "^1.0.1",
     "postcss-loader": "^3.0.0",
     "rimraf": "^3.0.2",
-    "source-map-explorer": "^2.4.2",
     "tailwindcss": "^1.4.4",
     "ts-loader": "^7.0.2",
     "ts-node": "^8.10.1",
