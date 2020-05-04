@@ -7,7 +7,7 @@ import HtmlWebpackPlugin    from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { VueLoaderPlugin }  from 'vue-loader';
 //
-import { Configuration, Plugin } from 'webpack';
+import { Configuration, EnvironmentPlugin, Plugin } from 'webpack';
 
 
 declare module 'vue-loader' {
@@ -39,7 +39,7 @@ const config: Configuration = {
   output:
   {
     path: pathResolve(__dirname, './dist'),
-    // publicPath: 'dist'
+    publicPath: process.env.NODE_ENV,
   },
 
   resolve: {
@@ -59,17 +59,19 @@ const config: Configuration = {
     inline: true,
     hot: true,
     stats: 'minimal',
-    // contentBase: pathJoin(__dirname, 'public'),
-    // contentBasePublicPath: pathJoin(__dirname, 'public'),
     overlay: true,
-    historyApiFallback: {
-      index: 'public/index.html'
-    },
+    historyApiFallback: true,
   },
 
   /* PLUGINS */
 
   plugins: [
+
+    // Safe environment variables
+    new EnvironmentPlugin({
+      'NODE_ENV': 'development',
+      'BASE_URL': '/',
+    }),
 
     // Generate dist/index.html
     new HtmlWebpackPlugin({
