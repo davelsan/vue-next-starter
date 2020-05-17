@@ -7,12 +7,8 @@ import HtmlWebpackPlugin    from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { VueLoaderPlugin }  from 'vue-loader';
 //
-import { Configuration, EnvironmentPlugin, Plugin } from 'webpack';
+import { Configuration, EnvironmentPlugin } from 'webpack';
 
-
-declare module 'vue-loader' {
-  export class VueLoaderPlugin extends Plugin { }
-}
 
 const prod = process.env.NODE_ENV === 'production';
 
