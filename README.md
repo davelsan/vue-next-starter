@@ -64,7 +64,3 @@ The transpiled `home` and `about` modules have a significant unmapped percentage
 ### vue-router
 
 To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScript, a `*.vue` module declaration was added to `shims.d.ts`. Read issues [#7](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/7) and [#18](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/18) for more information, and this [file](https://github.com/vuejs/vue-router-next/blob/master/playground/shim.d.ts) for an example.
-
-### webpack
-
-To allow the named `VueLoaderPlugin` export in `webpack.config.ts`, the `vue-loader` module declaration was augmented to include the named export. This should be fixed as soon as the corresponding type export is added to the package (see issue [#1667](https://github.com/vuejs/vue-loader/issues/1667) for more information).
