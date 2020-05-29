@@ -18,14 +18,12 @@
     "@typescript-eslint/parser": "^3.0.1",
     "@vue/compiler-sfc": "^3.0.0-beta.14",
     "autoprefixer": "^9.8.0",
-    "cross-env": "^7.0.2",
     "eslint": "^7.1.0",
     "eslint-plugin-vue": "^7.0.0-alpha.4",
     "path-browserify": "^1.0.1",
     "rimraf": "^3.0.2",
     "tailwindcss": "^1.4.6",
     "typescript": "^3.9.3",
-    "url-loader": "^4.1.0",
     "vite": "^0.18.0"
   }
 }
