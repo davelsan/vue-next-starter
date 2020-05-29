@@ -8,7 +8,8 @@
     <HelloWorld
       v-bind="hello"
     >
-      This is a HMR test message
+      <div> This is a non-reactive HMR test message </div>
+      <div> {{ msgHMR }} </div>
     </HelloWorld>
 
 
@@ -31,7 +32,8 @@
 
     setup () {
 
-      const msg = "Vue 3 Starter App";
+      const msg = 'Vue 3 Starter App';
+      const msgHMR = 'This is a reactive HMR test message';
 
       const linkData = fetchLinks([
         'vCLI',
@@ -45,7 +47,8 @@
       };
 
       return {
-        hello
+        hello,
+        msgHMR,
       };
     }
   });
