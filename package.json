@@ -2,7 +2,6 @@
   "name": "vue-next-starter",
   "private": true,
   "scripts": {
-    "analyze": "",
     "build": "rimraf -f dist/ && env-cmd -e production webpack",
     "lint": "eslint --ext .js,.ts,.vue ./src",
     "serve": "env-cmd -e development webpack-dev-server --progress"
@@ -23,7 +22,6 @@
     "@typescript-eslint/parser": "^3.0.1",
     "@vue/compiler-sfc": "^3.0.0-beta.14",
     "autoprefixer": "^9.8.0",
-    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "env-cmd": "^10.1.0",
     "eslint": "^7.1.0",
