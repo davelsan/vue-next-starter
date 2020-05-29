@@ -35,17 +35,14 @@
 
     setup (props) {
 
-      // Common svg assets path
-      const path = 'assets/svg/icon-defs.svg';
+      // Determine Module or Global path
+      const path = props.module
+        ? `/src/modules/${props.module}/`
+        : `/src/`;
 
-      // Determine Module or Global file
-      const file = props.module
-        ? `/src/modules/${props.module}/${path}`
-        : `/src/${path}`;
-
-      // Construct href path
+      // Compose href path
       const href = computed(
-        () => file + '#' + props.id
+        () => path + 'assets/svg/icon-defs.svg#' + props.id
       );
 
       return {
