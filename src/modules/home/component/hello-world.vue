@@ -59,8 +59,9 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, Prop } from 'vue';
-  import { LinkSection }           from '@/types/app';
+
+  import { defineComponent, PropType } from 'vue';
+  import { LinkSection }               from '../data/vue-links.schema';
 
   export default defineComponent({
 
@@ -74,10 +75,11 @@
       },
 
       linkData: {
-        type: Array,
+        type: Array as PropType<LinkSection[]>,
         default: () => []
-      } as Prop<LinkSection[]>
+      },
 
     },
   });
+
 </script>
