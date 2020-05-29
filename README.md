@@ -59,4 +59,4 @@ To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScri
 
 ### hot reload
 
-HMR does not trigger on changes to `<slot/>` content. Read issue [#1669](https://github.com/vuejs/vue-loader/issues/1669) for more information.
+HMR does not trigger on changes to static `<slot/>` content. Read issue [#1669](https://github.com/vuejs/vue-loader/issues/1669) for more information.

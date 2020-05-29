@@ -5,10 +5,8 @@
 
     <img alt="Vue logo" src="@/assets/logo.png">
 
-    <HelloWorld
-      v-bind="hello"
-    >
-      <div> This is a non-reactive HMR test message </div>
+    <HelloWorld v-bind="hello" >
+      <div> This is a static HMR test message </div>
       <div> {{ msgHMR }} </div>
     </HelloWorld>
 
@@ -33,7 +31,7 @@
     setup () {
 
       const msg = 'Vue 3 Starter App';
-      const msgHMR = 'This is a reactive HMR test message';
+      const msgHMR = 'This is an observed HMR test message';
 
       const linkData = fetchLinks([
         'vCLI',
