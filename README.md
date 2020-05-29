@@ -4,7 +4,7 @@
 
 ## Overview
 
-A minimal starter app built from scratch configured to use [webpack](https://webpack.js.org/). The main benefits of not using the [Vue CLI](https://cli.vuejs.org/) are full access to webpack configuration, and having a non-flat `node_modules` folder structure managed by [pnpm](https://pnpm.js.org/). For a CLI version of the app, see the [cli-version](https://github.com/davelsan/vue-next-starter/tree/cli-version) branch.
+A minimal starter app built from scratch configured to use [webpack](https://webpack.js.org/). The main benefits of not using the [Vue CLI](https://cli.vuejs.org/) are full access to webpack configuration, and having a non-flat `node_modules` folder structure managed by [pnpm](https://pnpm.js.org/). For a CLI or Vite version of the app, see the [cli-version](https://github.com/davelsan/vue-next-starter/tree/cli-version) and [vite-version](https://github.com/davelsan/vue-next-starter/tree/vite-version) branches, respectively.
 
 
 ## Features
