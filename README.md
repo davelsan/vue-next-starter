@@ -43,6 +43,17 @@ Linting is configured to use the recommended `vue3-essential` rules from [eslint
 
 The original components have been modified to use [Tailwind CSS](https://tailwindcss.com/) utility classes. Relevant configuration files are `postcss.config.js`, `tailwind.config.js`, and `src/css/tailwind.css`.
 
+### Icons
+
+SVG icons are loaded dynamically from a sprite system (`icon-defs.svg`), by their assigned `id` property.
+
+This is done via a global [`svg-icon`](./src/modules/shared/components/svg-icon/svg-icon.svg) component, which can load icons from:
+
+- The global `src/assets/svg/` folder (default)
+- The corresponding `src/modules/<module-name>/assets/svg/` folder, by setting the `module` property.
+
+An example can be found in the [`home.vue`](./src/modules/home/home.vue) component.
+
 ## Pending
 
 - [ ] Add [Jest](https://jestjs.io/) support (check the [vue-test-utils-next](https://github.com/vuejs/vue-test-utils-next?ref=madewithvuejs.com) docs)
