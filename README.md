@@ -4,7 +4,7 @@
 
 ## Overview
 
-A minimal starter app built from scratch configured to use [vite](https://github.com/vitejs/vite) (for other versions see: [cli](https://github.com/davelsan/vue-next-starter/tree/cli-version) | [webpack](https://github.com/davelsan/vue-next-starter)).
+A minimal starter app built from scratch configured to use [vite](https://github.com/vitejs/vite). For a CLI or webpack version of the app, see [cli-version](https://github.com/davelsan/vue-next-starter/tree/cli-version) and [master](https://github.com/davelsan/vue-next-starter) branches, respectively.
 
 
 ## Features
