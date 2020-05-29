@@ -31,7 +31,6 @@ pnpm install
 pnpm run build      # compile and minify for production
 pnpm run lint       # lint and fix typescript files
 pnpm run serve      # compile and hot-reload for development
-pnpm run stats      # generate a source-map-explorer report
 ```
 
 ## Configuration
