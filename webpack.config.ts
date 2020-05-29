@@ -52,11 +52,12 @@ const config: Configuration = {
 
   devServer: {
 
-    inline: true,
-    hot: true,
-    stats: 'minimal',
-    overlay: true,
+    clientLogLevel: 'warn',
     historyApiFallback: true,
+    hot: true,
+    inline: true,
+    overlay: true,
+    stats: 'minimal',
   },
 
   /* PLUGINS */
