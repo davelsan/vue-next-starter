@@ -3,7 +3,11 @@
     class="flex flex-col justify-center items-center p-6"
   >
 
-    <img alt="Vue logo" src="@/assets/logo.png">
+    <SvgIcon
+      id="vue-logo"
+      module="home"
+      class="w-64 h-64"
+    />
 
     <HelloWorld v-bind="hello" >
       <div> This is a static HMR test message </div>
