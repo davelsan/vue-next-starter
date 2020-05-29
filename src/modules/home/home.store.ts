@@ -1,6 +1,6 @@
 import { reactive }    from 'vue';
-import { LinkSection } from '@/types/app';
-import vueLinks        from '@/data/vue-links.json';
+import { LinkSection } from '../../types/app';
+import vueLinks        from '../../data/vue-links.json';
 
 
 const links = vueLinks as LinkSection[];

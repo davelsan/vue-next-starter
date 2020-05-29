@@ -3,7 +3,7 @@
     class="flex flex-col justify-center items-center p-6"
   >
 
-    <img alt="Vue logo" src="@/assets/logo.png">
+    <img alt="Vue logo" src="../../assets/logo.png">
 
     <HelloWorld v-bind="hello" />
 

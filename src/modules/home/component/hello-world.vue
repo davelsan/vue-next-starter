@@ -58,7 +58,7 @@
 
 <script lang="ts">
   import { defineComponent, Prop } from 'vue';
-  import { LinkSection }           from '@/types/app';
+  import { LinkSection }           from '../../../types/app';
 
   export default defineComponent({
 
