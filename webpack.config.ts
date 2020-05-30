@@ -3,6 +3,7 @@ import {
   resolve as pathResolve
 } from 'path';
 //
+import CopyPlugin           from 'copy-webpack-plugin';
 import HtmlWebpackPlugin    from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { VueLoaderPlugin }  from 'vue-loader';
@@ -63,6 +64,13 @@ const config: Configuration = {
   /* PLUGINS */
 
   plugins: [
+
+    // Copy SVG sprite files to dist/ (keeps folder structure)
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/**/icon-defs.svg' },
+      ],
+    }),
 
     // Safe environment variables
     new EnvironmentPlugin({
