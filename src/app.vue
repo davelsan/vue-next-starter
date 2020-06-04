@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<style>
+<style lang="postcss" scoped>
 
   nav a {
     @apply font-bold text-gray-600;
