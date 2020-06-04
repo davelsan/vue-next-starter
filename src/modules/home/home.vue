@@ -22,6 +22,8 @@
   import { defineComponent } from 'vue';
   import { fetchLinks }      from './home.store';
   //
+  import './assets/svg/home.svg';
+  //
   import HelloWorld from './component/hello-world.vue';
 
   export default defineComponent({

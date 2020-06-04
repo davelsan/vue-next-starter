@@ -1,18 +1,12 @@
 <template>
-
-  <svg
-    id="#svg"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-  >
+  <svg id="svg" >
 
     <use
       class="fill-current"
       :xlink:href="href"
-    ></use>
+    />
 
   </svg>
-
 </template>
 
 <script lang="ts">
@@ -30,20 +24,13 @@
 
       module: {
         type: String,
+        required: true,
       }
     },
 
     setup (props) {
 
-      // Determine Module or Global path
-      const path = props.module
-        ? `/src/modules/${props.module}/`
-        : `/src/`;
-
-      // Compose href path
-      const href = computed(
-        () => path + 'assets/svg/icon-defs.svg#' + props.id
-      );
+      const href = `${props.module}.svg#${props.module}_${props.id}`;
 
       return {
         href,
@@ -52,13 +39,13 @@
   });
 </script>
 
-<style>
+<style lang="postcss" scoped>
 
   /*
     Style the referencing <use> element, from which the shadow svg
     element inherits.
   */
-  #svg {
+  svg-icon {
     all: inherit;
   }
 

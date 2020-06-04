@@ -45,12 +45,9 @@ The original components have been modified to use [Tailwind CSS](https://tailwin
 
 ### Icons
 
-SVG icons are loaded dynamically from a sprite system (`icon-defs.svg`), by their assigned `id` property.
+SVG icons are bundled by the [`svg-sprite-loader`](https://github.com/JetBrains/svg-sprite-loader) plugin. An `*.svg` sprites file is supplied by each individual module, and should be imported at the entry component.
 
-This is done via a global [`svg-icon`](./src/modules/shared/components/svg-icon/svg-icon.vue) component, which can load icons from:
-
-- The global `src/assets/svg/` folder (default)
-- The corresponding `src/modules/<module-name>/assets/svg/` folder, by setting the `module` property.
+Icons are dynamically loaded via a shared [`svg-icon`](./src/modules/shared/components/svg-icon/svg-icon.vue) component. The `id` and `module` (imported `*.svg` filename without extension) props are required to generate the correct path to the sprite.
 
 An example can be found in the [`home.vue`](./src/modules/home/home.vue) component.
 

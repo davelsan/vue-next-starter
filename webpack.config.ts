@@ -1,11 +1,12 @@
 import {
-  join    as pathJoin,
-  resolve as pathResolve
+  basename as pathBasename,
+  join     as pathJoin,
+  resolve  as pathResolve
 } from 'path';
 //
-import CopyPlugin           from 'copy-webpack-plugin';
 import HtmlWebpackPlugin    from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import SpriteLoaderPlugin   from 'svg-sprite-loader/plugin';
 import { VueLoaderPlugin }  from 'vue-loader';
 //
 import { Configuration, EnvironmentPlugin } from 'webpack';
@@ -65,13 +66,6 @@ const config: Configuration = {
 
   plugins: [
 
-    // Copy SVG sprite files to dist/ (keeps folder structure)
-    new CopyPlugin({
-      patterns: [
-        { from: 'src/**/icon-defs.svg' },
-      ],
-    }),
-
     // Safe environment variables
     new EnvironmentPlugin({
       'NODE_ENV': 'development',
@@ -91,6 +85,11 @@ const config: Configuration = {
       chunkFilename: '[id].css',
     }),
 
+    // Bundle SVG sprites in separate module files
+    new SpriteLoaderPlugin({
+      plainSprite: true,
+    }),
+
     // Apply *.ext rules to the relevant blocks in *.vue files
     new VueLoaderPlugin(),
 
@@ -104,7 +103,7 @@ const config: Configuration = {
 
       // *.css
       {
-        test: /\.css$/,
+        test: /\.(css|postcss)$/,
         use: [
           {
             loader: prod
@@ -138,6 +137,21 @@ const config: Configuration = {
           loader: 'url-loader',
           options: { limit: 8192 },
         },
+      },
+
+      // *.svg
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              symbolId: '[name]',
+              spriteFilename: (svgPath: string) => `${pathBasename(svgPath)}`
+            }
+          },
+        ],
       },
 
       // *.ts
