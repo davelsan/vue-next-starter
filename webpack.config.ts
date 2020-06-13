@@ -36,6 +36,10 @@ const config: Configuration = {
 
   output:
   {
+    filename: prod
+      ? '[name].[contenthash].js'
+      : '[name].[hash].js',
+
     path: pathResolve(__dirname, './dist'),
     publicPath: process.env.NODE_ENV,
   },
@@ -170,7 +174,21 @@ const config: Configuration = {
         use: 'vue-loader',
       },
     ]
-  }
+  },
+
+  optimization: {
+    runtimeChunk: 'single',
+    moduleIds: 'hashed',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
 };
 
 export default config;
