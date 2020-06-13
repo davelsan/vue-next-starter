@@ -6,6 +6,7 @@ devDependencies:
   '@types/browserify': 12.0.36
   '@types/mini-css-extract-plugin': 0.9.1
   '@types/node': 14.0.13
+  '@types/svg-sprite-loader': 3.9.2
   '@types/webpack': 4.41.17
   '@types/webpack-dev-server': 3.11.0
   '@types/webpack-env': 1.15.2
@@ -202,6 +203,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
+  /@types/svg-sprite-loader/3.9.2:
+    dependencies:
+      '@types/webpack': 4.41.17
+    dev: true
+    resolution:
+      integrity: sha512-J4TffGc8WeBVUmLOQSrCgujcGEnovtvmyzRtfXj5ri/f4yaayTCPY4qwNEvdk67tnHV6GnhhuPsdOn6WrnfAMw==
   /@types/tapable/1.0.5:
     dev: true
     resolution:
@@ -6618,6 +6625,7 @@ specifiers:
   '@types/browserify': ^12.0.36
   '@types/mini-css-extract-plugin': ^0.9.1
   '@types/node': ^14.0.13
+  '@types/svg-sprite-loader': ^3.9.2
   '@types/webpack': ^4.41.17
   '@types/webpack-dev-server': ^3.11.0
   '@types/webpack-env': ^1.15.2
