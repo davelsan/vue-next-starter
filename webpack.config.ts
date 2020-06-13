@@ -4,10 +4,11 @@ import {
   resolve  as pathResolve
 } from 'path';
 //
-import HtmlWebpackPlugin    from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import SpriteLoaderPlugin   from 'svg-sprite-loader/plugin';
-import { VueLoaderPlugin }  from 'vue-loader';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import HtmlWebpackPlugin      from 'html-webpack-plugin';
+import MiniCssExtractPlugin   from 'mini-css-extract-plugin';
+import SpriteLoaderPlugin     from 'svg-sprite-loader/plugin';
+import { VueLoaderPlugin }    from 'vue-loader';
 //
 import { Configuration, EnvironmentPlugin } from 'webpack';
 
@@ -69,6 +70,9 @@ const config: Configuration = {
   /* PLUGINS */
 
   plugins: [
+
+    // Clean dist/ folder
+    new CleanWebpackPlugin(),
 
     // Safe environment variables
     new EnvironmentPlugin({

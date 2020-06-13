@@ -13,6 +13,7 @@ devDependencies:
   '@typescript-eslint/parser': 3.2.0_eslint@7.2.0+typescript@3.9.5
   '@vue/compiler-sfc': 3.0.0-beta.15_vue@3.0.0-beta.15
   autoprefixer: 9.8.0
+  clean-webpack-plugin: 3.0.0_webpack@4.43.0
   css-loader: 3.6.0_webpack@4.43.0
   env-cmd: 10.1.0
   eslint: 7.2.0
@@ -23,7 +24,6 @@ devDependencies:
   mini-css-extract-plugin: 0.9.0_webpack@4.43.0
   path-browserify: 1.0.1
   postcss-loader: 3.0.0
-  rimraf: 3.0.2
   svg-sprite-loader: 5.0.0_webpack@4.43.0
   tailwindcss: 1.4.6
   ts-loader: 7.0.5_typescript@3.9.5
@@ -1244,6 +1244,18 @@ packages:
       node: '>= 4.0'
     resolution:
       integrity: sha512-VcMWDN54ZN/DS+g58HYL5/n4Zrqe8vHJpGA8KdgUXFU4fuP/aHNw8eld9SyEIyabIMJX/0RaY/fplOo5hYLSFA==
+  /clean-webpack-plugin/3.0.0_webpack@4.43.0:
+    dependencies:
+      '@types/webpack': 4.41.17
+      del: 4.1.1
+      webpack: 4.43.0_webpack@4.43.0
+    dev: true
+    engines:
+      node: '>=8.9.0'
+    peerDependencies:
+      webpack: '*'
+    resolution:
+      integrity: sha512-MciirUH5r+cYLGCOL5JX/ZLzOZbVr1ot3Fw+KcvbhUb6PM+yycqd9ZhIlcigQ5gl+XhppNmw3bEFuaaMNyLj3A==
   /cli-cursor/3.1.0:
     dependencies:
       restore-cursor: 3.1.0
@@ -5159,13 +5171,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
-  /rimraf/3.0.2:
-    dependencies:
-      glob: 7.1.6
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   /ripemd160/2.0.2:
     dependencies:
       hash-base: 3.1.0
@@ -6620,6 +6625,7 @@ specifiers:
   '@typescript-eslint/parser': ^3.2.0
   '@vue/compiler-sfc': ^3.0.0-beta.15
   autoprefixer: ^9.8.0
+  clean-webpack-plugin: ^3.0.0
   css-loader: ^3.6.0
   env-cmd: ^10.1.0
   eslint: ^7.2.0
@@ -6631,7 +6637,6 @@ specifiers:
   path-browserify: ^1.0.1
   postcss-loader: ^3.0.0
   register-service-worker: ^1.7.1
-  rimraf: ^3.0.2
   svg-sprite-loader: ^5.0.0
   tailwindcss: ^1.4.6
   ts-loader: ^7.0.5
