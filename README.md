@@ -71,7 +71,3 @@ The transpiled `home` and `about` modules have a significant unmapped percentage
 ### vue-router
 
 To use [vue-router-next](https://github.com/vuejs/vue-router-next) with TypeScript, a `*.vue` module declaration was added to `shims.d.ts`. Read issues [#7](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/7) and [#18](https://github.com/vuejs/vue-cli-plugin-vue-next/issues/18) for more information, and this [file](https://github.com/vuejs/vue-router-next/blob/master/playground/shim.d.ts) for an example.
-
-### hot reload
-
-HMR does not trigger on changes to static <slot/> content. Read issue [#1669](https://github.com/vuejs/vue-loader/issues/1669) for more information.

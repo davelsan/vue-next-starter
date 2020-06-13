@@ -3,8 +3,6 @@
   <!-- MAIN HEADER -->
   <div>
 
-    <slot />
-
     <h1
       class="mt-10 mb-2 font-bold text-xl"
     >

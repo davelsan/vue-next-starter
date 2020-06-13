@@ -9,10 +9,7 @@
       class="w-64 h-64"
     />
 
-    <HelloWorld v-bind="hello" >
-      <div> This is a static HMR test message </div>
-      <div> {{ msgHMR }} </div>
-    </HelloWorld>
+    <HelloWorld v-bind="hello" />
 
   </div>
 </template>
