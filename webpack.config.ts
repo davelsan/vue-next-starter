@@ -10,7 +10,7 @@ import MiniCssExtractPlugin   from 'mini-css-extract-plugin';
 import SpriteLoaderPlugin     from 'svg-sprite-loader/plugin';
 import { VueLoaderPlugin }    from 'vue-loader';
 //
-import { Configuration, EnvironmentPlugin } from 'webpack';
+import { Configuration, DefinePlugin, EnvironmentPlugin } from 'webpack';
 
 
 const prod = process.env.NODE_ENV === 'production';
@@ -49,7 +49,6 @@ const config: Configuration = {
 
     alias: {
       '@': pathResolve(__dirname, 'src/'),
-      // 'vue': '@vue/runtime-dom'
     },
 
     extensions: ['.js', '.json', '.ts', 'vue'],
@@ -100,6 +99,11 @@ const config: Configuration = {
 
     // Apply *.ext rules to the relevant blocks in *.vue files
     new VueLoaderPlugin(),
+
+    new DefinePlugin({
+      __VUE_OPTIONS_API__: false,
+      __VUE_PROD_DEVTOOLS__: false,
+    }),
 
   ],
 
