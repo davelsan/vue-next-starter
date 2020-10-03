@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="base-sprites">
+
+  <symbol id="base-sprites_vue-logo" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.41" clip-rule="evenodd" viewBox="0 0 262 227">
+    <title>Vue</title>
+    <desc>Vue Logo</desc>
+    <g fill-rule="nonzero">
+      <path fill="#41b883" d="M161.1 0l-30.2 52.3L100.7 0H0l130.9 226.6L261.7 0H161.1z" />
+      <path fill="#34495e" d="M161.1 0l-30.2 52.3L100.7 0H52.4l78.5 136L209.4 0h-48.3z" />
+    </g>
+  </symbol>
+
+</symbol></defs></svg>
