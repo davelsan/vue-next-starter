@@ -1,14 +1,15 @@
 import { createApp } from 'vue';
 
 /* PLUGINS */
-import { registerServiceWorker } from './app.pwa';
-import { router }                from './app.router';
+import { registerServiceWorker } from '@/app.pwa';
+import { router }                from '@/app.router';
 
 /* COMPONENTS */
-import { registerSharedComponents } from './app.shared';
+import { registerSharedComponents } from '@/app.shared';
 
 /* STYLES */
-import './css/tailwind.css';
+import '@/css/tailwind.css';
+import '@/assets/svg/base-sprites.svg';
 
 /* ENTRY POINT */
 import app from './app.vue';

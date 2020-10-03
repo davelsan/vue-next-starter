@@ -5,7 +5,7 @@
 
     <SvgIcon
       id="vue-logo"
-      module="home"
+      file="base-sprites"
       class="w-64 h-64"
     />
 
@@ -18,9 +18,7 @@
 
   import { defineComponent } from 'vue';
   import { fetchLinks }      from './home.store';
-  //
-  import './assets/svg/home.svg';
-  //
+
   import HelloWorld from './component/hello-world.vue';
 
   export default defineComponent({

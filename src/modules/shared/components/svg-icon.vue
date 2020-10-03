@@ -22,7 +22,7 @@
         required: true,
       },
 
-      module: {
+      file: {
         type: String,
         required: true,
       }
@@ -30,7 +30,7 @@
 
     setup (props) {
 
-      const href = `${props.module}.svg#${props.module}_${props.id}`;
+      const href = `${props.file}.svg#${props.file}_${props.id}`;
 
       return {
         href,

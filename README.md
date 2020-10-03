@@ -11,6 +11,7 @@
     </a>
 </p>
 
+
 ## Overview
 
 A minimal starter app built from scratch configured to use [webpack](https://webpack.js.org/). The main benefits of not using the [Vue CLI](https://cli.vuejs.org/) are full access to webpack configuration, and having a non-flat `node_modules` folder structure managed by [pnpm](https://pnpm.js.org/). For a CLI or Vite version of the app, see the [cli-version](https://github.com/davelsan/vue-next-starter/tree/cli-version) and [vite-version](https://github.com/davelsan/vue-next-starter/tree/vite-version) branches, respectively.
@@ -63,7 +64,7 @@ This page features a [live demo](https://davelsan.github.io/vue-next-starter/#/)
 
 ### Lint
 
-Linting is configured to use the recommended `vue3-essential` rules from [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue). For more information, check the [documentation](https://eslint.vuejs.org/rules/). A few extra rules have been added for `template`, `script`  and `*.ts` indentation. There is basic support for linting `*.js` config files, but neither [babel](https://babeljs.io/) or [core-js](https://github.com/zloirock/core-js) are installed.
+Linting is configured to use the recommended `vue3-essential` rules from [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue). For more information, check the plugin [documentation](https://eslint.vuejs.org/rules/). A few extra rules have been added for `template`, `script`  and `*.ts` indentation. There is basic support for linting `*.js` config files, but neither [babel](https://babeljs.io/) or [core-js](https://github.com/zloirock/core-js) are installed.
 
 ### Styles
 
@@ -71,11 +72,12 @@ The original components have been modified to use [Tailwind CSS](https://tailwin
 
 ### Icons
 
-SVG icons are bundled by the [`svg-sprite-loader`](https://github.com/JetBrains/svg-sprite-loader) plugin. An `*.svg` sprites file is supplied by each individual module, and should be imported at the entry component.
+This application comes pre-configured with an optional sprite system that uses the [`svg-sprite-loader`](https://github.com/JetBrains/svg-sprite-loader) plugin to easily import SVG sprites where needed.
 
-Icons are dynamically loaded via a shared [`svg-icon`](./src/modules/shared/components/svg-icon/svg-icon.vue) component. The `id` and `module` (imported `*.svg` filename without extension) props are required to generate the correct path to the sprite.
+To use this system, `*.svg` sprites must be imported at either the app entry point, or by the module or component that will use its SVG definitions. Icons can then be dynamically loaded via a global [`svg-icon`](./src/modules/shared/components/svg-icon/svg-icon.vue) component. The `id` and `file` (imported `*.svg` filename without extension) props are required to generate the correct path to the sprite.
 
-An example can be found in the [`home.vue`](./src/modules/home/home.vue) component.
+An example can be found in the [`home.vue`](./src/modules/home/home.vue) component. The `home` module uses this system to render an `svg` that is defined within a `base-sprites.svg` file imported in `app.main.ts`. By importing `base-sprites.svg` at the app entry point, its icons are made available to the whole application.
+
 
 ## Troubleshooting
 
