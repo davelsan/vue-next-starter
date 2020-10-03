@@ -22,11 +22,11 @@
       class="mt-10"
     >
 
-      <h3
+      <h2
         class="font-bold"
       >
         {{ section.title }}
-      </h3>
+      </h2>
 
       <ul
         class="list-none"
