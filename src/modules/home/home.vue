@@ -36,9 +36,8 @@
       const msgHMR = "This is an observed HMR test message";
 
       const linkData = fetchLinks([
-        'vCLI',
         'vEssential',
-        'vEcosystem'
+        'vEcosystem',
       ]);
 
       const hello = {
