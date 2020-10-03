@@ -54,6 +54,20 @@ const config: Configuration = {
     extensions: ['.js', '.json', '.ts', 'vue'],
   },
 
+  optimization: {
+    runtimeChunk: 'single',
+    moduleIds: 'hashed',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
+
   /* DEV SERVER */
 
   devServer: {
@@ -184,19 +198,6 @@ const config: Configuration = {
     ]
   },
 
-  optimization: {
-    runtimeChunk: 'single',
-    moduleIds: 'hashed',
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
-      },
-    },
-  },
 };
 
 export default config;
