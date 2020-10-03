@@ -1,7 +1,7 @@
 import { App } from 'vue';
 
 /* COMPONENTS */
-import SvgIcon from './modules/shared/components/svg-icon/svg-icon.vue';
+import SvgIcon from './modules/shared/components/svg-icon.vue';
 import AppLink from './modules/shared/components/app-link.vue';
 
 /**
