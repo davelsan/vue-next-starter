@@ -1,6 +1,15 @@
 <h1 align=center>Vue-Next Starter</h1>
 
-<p align=center>A <a href="https://github.com/vuejs/vue-next">vue-next</a> progressive web application with TypeScript support.</p>
+<p align=center>A <a href="https://github.com/vuejs/vue-next">vue-next</a> single page application with TypeScript support.</p>
+
+<p align="center">
+    <a href="https://actions-badge.atrox.dev/davelsan/vue-next-starter/goto?ref=master">
+      <img alt="Build Status" src="https://github.com/davelsan/vue-next-starter/workflows/build/badge.svg?branch=master"/>
+    </a>
+    <a href="https://github.com/davelsan/vue-next-starter/blob/master/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/davelsan/vue-next-starter"/>
+    </a>
+</p>
 
 ## Overview
 
@@ -13,24 +22,42 @@ A minimal starter app built from scratch configured to use [webpack](https://web
 - [Tailwind CSS](https://tailwindcss.com/) for component styling.
 - [ESLint](https://eslint.org/) support for both `*.ts` files and SFCs.
 
+### Pending
+
+- [ ] Try the the new [sfc-script-setup](https://github.com/vuejs/rfcs/blob/sfc-improvements/active-rfcs/0000-sfc-script-setup.md) syntax.
+- [ ] Use [vue-svg-loader](https://github.com/visualfanatic/vue-svg-loader/tree/dev#webpack) (it recently added support for vue 3).
+- [ ] Add [Jest](https://jestjs.io/) support (check the [vue-test-utils-next](https://github.com/vuejs/vue-test-utils-next?ref=madewithvuejs.com) docs).
+- [ ] Keep an eye out for improvements to the the module-based architecture, especially in regards to state management (with or without [Vuex 4](https://github.com/vuejs/vuex/tree/4.0)).
+- [ ] Implement PWA functionality.
+
+
 ## Develop
 
 The project was designed with `pnpm` in mind, but `yarn` or `npm` will work just fine.
 
-### Clone and Setup
+### Clone
 
 ```sh
 git clone git@github.com:davelsan/vue-next-starter.git
-pnpm install
 ```
 
-### Command Cheatsheet
+### Scripts
 
 ```sh
+pnpm install        # install node modules
 pnpm run build      # compile and minify for production
 pnpm run lint       # lint and fix typescript files
 pnpm run serve      # compile and hot-reload for development
 ```
+
+## Deploy
+
+This repository includes a [workflow](.github/workflows/build.yml) that will automatically deploy the app to [GitHub Pages](https://pages.github.com) on every `push` to the `master` branch. It uses `pnpm` to build for production, and will save and reuse the cached packages.
+
+The `vue-router-next` package is configured use `hash` mode. To deploy using history or memory modes, read the [relevant section](https://next.router.vuejs.org/guide/essentials/history-mode.html#hash-mode) in the docs. The `BASE_URL` environment variable in [.env-cmdrc](.env-cmdrc) controls the base route in which the app is deployed to.
+
+This page features a [live demo](https://davelsan.github.io/vue-next-starter/#/) showcasing the deployed repository using the current configuration.
+
 
 ## Configuration
 
@@ -49,14 +76,6 @@ SVG icons are bundled by the [`svg-sprite-loader`](https://github.com/JetBrains/
 Icons are dynamically loaded via a shared [`svg-icon`](./src/modules/shared/components/svg-icon/svg-icon.vue) component. The `id` and `module` (imported `*.svg` filename without extension) props are required to generate the correct path to the sprite.
 
 An example can be found in the [`home.vue`](./src/modules/home/home.vue) component.
-
-## Pending
-
-- [ ] Try the the new [sfc-script-setup](https://github.com/vuejs/rfcs/blob/sfc-improvements/active-rfcs/0000-sfc-script-setup.md) syntax.
-- [ ] Use [vue-svg-loader](https://github.com/visualfanatic/vue-svg-loader/tree/dev#webpack) (it recently added support for vue 3).
-- [ ] Add [Jest](https://jestjs.io/) support (check the [vue-test-utils-next](https://github.com/vuejs/vue-test-utils-next?ref=madewithvuejs.com) docs).
-- [ ] Keep an eye out for improvements to the the module-based architecture, especially in regards to state management (with or without [Vuex 4](https://github.com/vuejs/vuex/tree/4.0)).
-- [ ] Implement PWA functionality.
 
 ## Troubleshooting
 
