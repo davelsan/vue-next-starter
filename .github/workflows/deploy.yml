@@ -7,21 +7,37 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [12.x]
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
 
-      - name: Setup environment
+      - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: ${{ matrix.node-version }}
 
-      - name: Install
-        run: npm install
+      - name: Install pnpm
+        run: npm add -g pnpm
 
-      - name: Bundle
-        run: npm run build
+      - name: Use pnpm cache if it exists
+        uses: actions/cache@v1
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install packages and build for production
+        run: |
+          pnpm install
+          pnpm run build
 
       - name: Init new repo in dist folder and commit generated files
         run: |
@@ -31,6 +47,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m 'deploy'
+
       - name: Force push to gh-pages branch
         uses: ad-m/github-push-action@master
         with:
