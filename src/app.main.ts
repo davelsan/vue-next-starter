@@ -1,7 +1,6 @@
 import { createApp } from 'vue';
 
 /* PLUGINS */
-import { registerServiceWorker } from '@/app.pwa';
 import { router }                from '@/app.router';
 
 /* COMPONENTS */
@@ -16,7 +15,6 @@ import app from './app.vue';
 
 const createdApp = createApp(app);
 
-registerServiceWorker();
 registerSharedComponents(createdApp);
 
 createdApp
