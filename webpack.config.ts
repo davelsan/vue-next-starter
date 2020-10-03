@@ -42,7 +42,7 @@ const config: Configuration = {
       : '[name].[hash].js',
 
     path: pathResolve(__dirname, './dist'),
-    publicPath: process.env.NODE_ENV,
+    publicPath: process.env.BASE_URL,
   },
 
   resolve: {
@@ -114,9 +114,7 @@ const config: Configuration = {
         test: /\.(css|postcss)$/,
         use: [
           {
-            loader: prod
-              ? MiniCssExtractPlugin.loader
-              : 'vue-style-loader',
+            loader: MiniCssExtractPlugin.loader,
             options: {
               hmr: !prod,
               sourceMap: true,
@@ -125,7 +123,7 @@ const config: Configuration = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
+              // importLoaders: 1,
               sourceMap: true,
             },
           },
