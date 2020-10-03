@@ -1,13 +1,7 @@
 <template>
-  <div
-    class="flex flex-col justify-center items-center p-6"
-  >
+  <div class="flex flex-col justify-center items-center p-6" >
 
-    <SvgIcon
-      id="vue-logo"
-      module="home"
-      class="w-64 h-64"
-    />
+    <HomeSvg class="w-64 h-64" />
 
     <HelloWorld v-bind="hello" />
 
@@ -18,16 +12,16 @@
 
   import { defineComponent } from 'vue';
   import { fetchLinks }      from './home.store';
-  //
-  import './assets/svg/home.svg';
-  //
+
+  import HomeSvg    from './assets/svg/home.svg';
   import HelloWorld from './component/hello-world.vue';
 
   export default defineComponent({
     name: 'Home',
 
     components: {
-      HelloWorld
+      HelloWorld,
+      HomeSvg,
     },
 
     setup () {

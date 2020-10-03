@@ -34,6 +34,7 @@ devDependencies:
   url-loader: 4.1.0_file-loader@6.1.0+webpack@4.44.2
   vue-loader: 16.0.0-beta.8
   vue-style-loader: 4.1.2
+  vue-svg-loader: 0.17.0-beta.2_vue@3.0.0
   webpack: 4.44.2_93ca2875a658e9d1552850624e6b91c7
   webpack-cli: 3.3.12_webpack@4.44.2
   webpack-dev-server: 3.11.0_93ca2875a658e9d1552850624e6b91c7
@@ -226,6 +227,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+  /@types/q/1.5.4:
+    dev: true
+    resolution:
+      integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
   /@types/qs/6.9.5:
     dev: true
     resolution:
@@ -1348,6 +1353,16 @@ packages:
       node: '>=0.8'
     resolution:
       integrity: sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
+  /coa/2.0.2:
+    dependencies:
+      '@types/q': 1.5.4
+      chalk: 2.4.2
+      q: 1.5.1
+    dev: true
+    engines:
+      node: '>= 4.0'
+    resolution:
+      integrity: sha512-q5/jG+YQnSy4nRTV4F7lPepBJZ8qBNJJDBuJdoejDyLXgmL7IEo+Le2JDZudFTFt7mrCqIRaSjws4ygRCTCAXA==
   /collection-visit/1.0.0:
     dependencies:
       map-visit: 1.0.0
@@ -1645,6 +1660,10 @@ packages:
       webpack: ^4.27.0 || ^5.0.0
     resolution:
       integrity: sha512-rdezjCjScIrsL8BSYszgT4s476IcNKt6yX69t0pHjJVnPUTDpn4WfIpDQTN3wCJvUvfsz/mFjuGOekf3PY3NUg==
+  /css-select-base-adapter/0.1.1:
+    dev: true
+    resolution:
+      integrity: sha512-jQVeeRG70QI08vSTwf1jHxp74JoZsr2XSgETae8/xC8ovSnL2WF87GTLO86Sbwdt2lK4Umg4HnnwMO4YF3Ce7w==
   /css-select/1.2.0:
     dependencies:
       boolbase: 1.0.0
@@ -1654,6 +1673,33 @@ packages:
     dev: true
     resolution:
       integrity: sha1-KzoRBTnFNV8c2NMUYj6HCxIeyFg=
+  /css-select/2.1.0:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 3.4.1
+      domutils: 1.7.0
+      nth-check: 1.0.2
+    dev: true
+    resolution:
+      integrity: sha512-Dqk7LQKpwLoH3VovzZnkzegqNSuAziQyNZUcrdDM401iY+R5NkGBXGmtO05/yaXQziALuPogeG0b7UAgjnTJTQ==
+  /css-tree/1.0.0-alpha.37:
+    dependencies:
+      mdn-data: 2.0.4
+      source-map: 0.6.1
+    dev: true
+    engines:
+      node: '>=8.0.0'
+    resolution:
+      integrity: sha512-DMxWJg0rnz7UgxKT0Q1HU/L9BeJI0M6ksor0OgqOnF+aRCDWg/N2641HmVyU9KVIu0OVVWOb2IpC9A+BJRnejg==
+  /css-tree/1.0.0-alpha.39:
+    dependencies:
+      mdn-data: 2.0.6
+      source-map: 0.6.1
+    dev: true
+    engines:
+      node: '>=8.0.0'
+    resolution:
+      integrity: sha512-7UvkEYgBAHRG9Nt980lYxjsTrCyHFN53ky3wVsDkiMdVqylqRt+Zc+jm5qw7/qyOvN2dHSYtX0e4MbCCExSvnA==
   /css-unit-converter/1.1.2:
     dev: true
     resolution:
@@ -1662,6 +1708,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-a+EPoD+uZiNfh+5fxw2nO9QwFa6nJe2Or35fGY6Ipw1R3R4AGz1d1TEZrCegvw2YTmZ0jXirGYlzxxpYSHwpEg==
+  /css-what/3.4.1:
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-wHOppVDKl4vTAOWzJt5Ek37Sgd9qq1Bmj/T1OjvicWbU5W7ru7Pqbn0Jdqii3Drx/h+dixHKXNhZYx7blthL7g==
   /cssesc/3.0.0:
     dev: true
     engines:
@@ -1669,6 +1721,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
+  /csso/4.0.3:
+    dependencies:
+      css-tree: 1.0.0-alpha.39
+    dev: true
+    engines:
+      node: '>=8.0.0'
+    resolution:
+      integrity: sha512-NL3spysxUkcrOgnpsT4Xdl2aiEiBG6bXswAABQVHcMrfjjBisFOKwLDOmf4wf32aPdcJws1zds2B0Rg+jqMyHQ==
   /csstype/2.6.13:
     dev: false
     resolution:
@@ -3749,6 +3809,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==
+  /mdn-data/2.0.4:
+    dev: true
+    resolution:
+      integrity: sha512-iV3XNKw06j5Q7mi6h+9vbx23Tv7JkjEVgKHW4pimwyDGWm0OIQntJJ+u1C6mg6mK1EaTv42XQ7w76yuzH7M2cA==
+  /mdn-data/2.0.6:
+    dev: true
+    resolution:
+      integrity: sha512-rQvjv71olwNHgiTbfPZFkJtjNMciWgswYeciZhtvWLO8bmX3TnhyA62I6sTWOyZssWHJJjY6/KiWwqQsWWsqOA==
   /media-typer/0.3.0:
     dev: true
     engines:
@@ -4231,6 +4299,17 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-h6EKxMFpS9Lhy/U1kaZhQftd10c=
+  /object.values/1.1.1:
+    dependencies:
+      define-properties: 1.1.3
+      es-abstract: 1.17.7
+      function-bind: 1.1.1
+      has: 1.0.3
+    dev: true
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha512-WTa54g2K8iu0kmS/us18jEmdv1a4Wi//BZ/DTVYEcH0XhLM5NYdpDHja3gt57VrZLcNAO2WGA+KpWsDBaHt6eA==
   /obuf/1.1.2:
     dev: true
     resolution:
@@ -4852,6 +4931,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BE5CROfVGsx2XIhxGuZAT7rTH9lLeQx/6M0P7DTXQH4IUc3BBzs9JUzt4yzGf3JrH9enkeq6YJBe9CTtkm1WmQ==
+  /q/1.5.1:
+    dev: true
+    engines:
+      node: '>=0.6.0'
+      teleport: '>=0.2.0'
+    resolution:
+      integrity: sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
   /qs/6.7.0:
     dev: true
     engines:
@@ -5149,6 +5235,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+  /sax/1.2.4:
+    dev: true
+    resolution:
+      integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
   /schema-utils/1.0.0:
     dependencies:
       ajv: 6.12.5
@@ -5491,6 +5581,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
+  /stable/0.1.8:
+    dev: true
+    resolution:
+      integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
   /static-extend/0.1.2:
     dependencies:
       define-property: 0.2.5
@@ -5698,6 +5792,27 @@ packages:
       webpack: '*'
     resolution:
       integrity: sha512-/hedkRC2IS0E+kFIb+OUCfqQlbVx72/WEEeRGw2uPsNgOOgJEONXzjfSm+CJ3pB9gOHytlBmPMS8ijMCp5s2Eg==
+  /svgo/1.3.2:
+    dependencies:
+      chalk: 2.4.2
+      coa: 2.0.2
+      css-select: 2.1.0
+      css-select-base-adapter: 0.1.1
+      css-tree: 1.0.0-alpha.37
+      csso: 4.0.3
+      js-yaml: 3.14.0
+      mkdirp: 0.5.5
+      object.values: 1.1.1
+      sax: 1.2.4
+      stable: 0.1.8
+      unquote: 1.1.1
+      util.promisify: 1.0.1
+    dev: true
+    engines:
+      node: '>=4.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw==
   /table/5.4.6:
     dependencies:
       ajv: 6.12.5
@@ -6004,6 +6119,10 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
+  /unquote/1.1.1:
+    dev: true
+    resolution:
+      integrity: sha1-j97XMk7G6IoP+LkF58CYzcCG1UQ=
   /unset-value/1.0.0:
     dependencies:
       has-value: 0.3.1
@@ -6093,6 +6212,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-i+6qA2MPhvoKLuxnJNpXAGhg7HphQOSUq2LKMZD0m15EiskXUkMvKdF4Uui0WYeCUGea+o2cw/ZuwehtfsrNkA==
+  /util.promisify/1.0.1:
+    dependencies:
+      define-properties: 1.1.3
+      es-abstract: 1.17.7
+      has-symbols: 1.0.1
+      object.getownpropertydescriptors: 2.1.0
+    dev: true
+    resolution:
+      integrity: sha512-g9JpC/3He3bm38zsLupWryXHoEcS22YHthuPQSJdMy6KNrzIRzWqcsHzD/WUnqe45whVou4VIsPew37DoXWNrA==
   /util/0.10.3:
     dependencies:
       inherits: 2.0.1
@@ -6173,6 +6301,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0ip8ge6Gzz/Bk0iHovU9XAUQaFt/G2B61bnWa2tCcqqdgfHs1lF9xXorFbE55Gmy92okFT+8bfmySuUOu13vxQ==
+  /vue-svg-loader/0.17.0-beta.2_vue@3.0.0:
+    dependencies:
+      loader-utils: 2.0.0
+      semver: 7.3.2
+      svgo: 1.3.2
+      vue: 3.0.0
+    dev: true
+    peerDependencies:
+      vue: ^2.5.0 || ^3.0.0-0
+    resolution:
+      integrity: sha512-iMUGJTKEcuNAG8VXOchjA8443IqEmEi2Aw6EVIHWma2cC4TUQ7Oet5Yry9IFfqXQXXvyzXz5EyttVvfRGTNH4Q==
   /vue/3.0.0:
     dependencies:
       '@vue/compiler-dom': 3.0.0
@@ -6516,6 +6655,7 @@ specifiers:
   vue-loader: ^16.0.0-beta.8
   vue-router: ^4.0.0-beta.13
   vue-style-loader: ^4.1.2
+  vue-svg-loader: ^0.17.0-beta.2
   webpack: ^4.44.2
   webpack-cli: ^3.3.12
   webpack-dev-server: ^3.11.0
