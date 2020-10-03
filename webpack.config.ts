@@ -100,9 +100,11 @@ const config: Configuration = {
     // Apply *.ext rules to the relevant blocks in *.vue files
     new VueLoaderPlugin(),
 
+    // Set esm-bundler flags to tree-shake the Options API and disable DevTools in production
+    // https://github.com/vuejs/vue-next/tree/master/packages/vue#bundler-build-feature-flags
     new DefinePlugin({
       __VUE_OPTIONS_API__: false,
-      __VUE_PROD_DEVTOOLS__: false,
+      __VUE_PROD_DEVTOOLS__: prod ? false : true,
     }),
 
   ],
