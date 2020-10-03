@@ -1,6 +1,11 @@
 {
   "name": "vue-next-starter",
   "private": true,
+  "author": {
+    "name": "David Velasco",
+    "url": "https://github.com/davelsan"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "env-cmd -e production webpack --progress",
     "lint": "eslint --ext .js,.ts,.vue ./src",
