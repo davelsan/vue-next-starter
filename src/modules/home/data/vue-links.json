@@ -1,49 +1,11 @@
 [
   {
-    "id": "vCLI",
-    "title": "Installed CLI Plugins",
-    "links": [
-      {
-        "href": "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel",
-        "label": "babel"
-      },
-      {
-        "href": "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript",
-        "label": "typescript"
-      },
-      {
-        "href": "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa",
-        "label": "pwa"
-      },
-      {
-        "href": "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router",
-        "label": "router"
-      },
-      {
-        "href": "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex",
-        "label": "vuex"
-      },
-      {
-        "href": "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint",
-        "label": "eslint"
-      },
-      {
-        "href": "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest",
-        "label": "unit-jest"
-      },
-      {
-        "href": "https://github.com/vuejs/vue-cli-plugin-vue-next",
-        "label": "vue-next"
-      }
-    ]
-  },
-  {
     "id": "vEssential",
     "title": "Essential Links",
     "links": [
       {
-        "href": "https://vuejs.org",
-        "label": "Core Docs"
+        "href": "https://v3.vuejs.org/",
+        "label": "Vue3 Core Docs"
       },
       {
         "href": "https://forum.vuejs.org",
@@ -68,20 +30,20 @@
     "title": "Ecosystem",
     "links": [
       {
-        "href": "https://router.vuejs.org",
-        "label": "vue-router"
+        "href": "https://github.com/vuejs/vue-router-next",
+        "label": "vue-router-next"
       },
       {
-        "href": "https://vuex.vuejs.org",
-        "label": "vuex"
+        "href": "https://github.com/vuejs/vuex/tree/4.0",
+        "label": "vuex@4"
       },
       {
-        "href": "https://github.com/vuejs/vue-devtools#vue-devtools",
-        "label": "vue-devtools"
+        "href": "https://github.com/vuejs/vue-devtools/tree/next",
+        "label": "vue-devtools@next"
       },
       {
-        "href": "https://vue-loader.vuejs.org",
-        "label": "vue-loader"
+        "href": "https://github.com/vuejs/vue-loader/tree/next",
+        "label": "vue-loader@next"
       },
       {
         "href": "https://github.com/vuejs/awesome-vue",

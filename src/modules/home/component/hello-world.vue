@@ -10,14 +10,10 @@
     </h1>
 
     <p>
-      For a guide and recipes on how to configure / customize this project,
-      check out the
-      <a
-        class="whitespace-no-wrap text-green-600"
-        href="https://cli.vuejs.org"
-        target="_blank"
-        rel="noopener"
-      >vue-cli documentation</a>.
+      A Vue3 SPA re-created from scratch using
+      <app-link href="https://pnpm.js.org"     label="pnpm" />,
+      <app-link href="https://pnpm.js.org"     label="Webpack" />, and
+      <app-link href="https://tailwindcss.com" label="TailwindCSS" />
     </p>
 
     <!-- LINK SECTIONS -->
